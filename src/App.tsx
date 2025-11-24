@@ -1,17 +1,27 @@
+import { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import VideoSection from './components/VideoSection';
-import OptInForm from './components/OptInForm';
+import HomePage from './components/HomePage';
+import FormModal from './components/modals/FormModal';
+import VideoModal from './components/modals/VideoModal';
 
 function App() {
+  const [isFormModalOpen, setIsFormModalOpen] = useState(false);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-[rgb(3,12,27)] text-white font-sans flex flex-col">
-      <Header />
-      <div className="flex-1 flex flex-col p-4 space-y-8 max-w-[1000px] mx-auto w-full">
-        <VideoSection />
-        <OptInForm />
+      <div className="container mx-auto px-4 md:px-10">
+        <Header />
+        <HomePage
+          onOpenWaitlist={() => setIsFormModalOpen(true)}
+          onOpenVideo={() => setIsVideoModalOpen(true)}
+        />
+        <Footer />
       </div>
-      <Footer />
+
+      <FormModal isOpen={isFormModalOpen} onClose={() => setIsFormModalOpen(false)} />
+      <VideoModal isOpen={isVideoModalOpen} onClose={() => setIsVideoModalOpen(false)} />
     </div>
   );
 }

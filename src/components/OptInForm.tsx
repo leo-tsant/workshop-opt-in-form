@@ -83,8 +83,7 @@ export default function OptInForm() {
 
   if (submitted) {
     return (
-      <div className="flex items-center justify-center">
-        <div className="card max-w-2xl w-full animate-fade-in text-center">
+      <div className="card w-full animate-fade-in text-center">
           <div className="mb-6">
             <svg
               className="mx-auto h-16 w-16 text-success"
@@ -111,13 +110,11 @@ export default function OptInForm() {
             Submit Another Request
           </button>
         </div>
-      </div>
     );
   }
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="card max-w-2xl w-full animate-fade-in">
+    <div className="card w-full animate-fade-in">
         <h2 className="text-2xl font-bold mb-6 text-white">Request Access</h2>
 
         {error && (
@@ -204,7 +201,6 @@ export default function OptInForm() {
             )}
           </button>
         </form>
-      </div>
     </div>
   );
 }
