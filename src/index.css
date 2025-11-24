@@ -360,6 +360,11 @@ td {
   padding: 40px 0;
 }
 
+/* Video Section */
+.video-section {
+  margin: 48px 0;
+}
+
 /* CTA Hero Section */
 .cta-hero {
   text-align: center;

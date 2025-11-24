@@ -1,14 +1,10 @@
 interface HomePageProps {
   onOpenWaitlist: () => void;
-  onOpenVideo: () => void;
 }
 
-export default function HomePage({
-  onOpenWaitlist,
-  onOpenVideo,
-}: HomePageProps) {
+export default function HomePage({ onOpenWaitlist }: HomePageProps) {
   return (
-    <div className="home-page">
+    <div className="home-page max-w-[1000px] mx-auto">
       {/* CTA Hero Section */}
       <section className="cta-hero">
         <h2 className="cta-tagline">
@@ -18,13 +14,38 @@ export default function HomePage({
           A continuous loop of iteration where each output improves with every
           generation.
         </p>
-        <div className="cta-buttons">
-          <button onClick={onOpenWaitlist} className="btn btn-primary">
-            Join the Waitlist
-          </button>
-          <button onClick={onOpenVideo} className="btn btn-secondary">
-            <span>▶</span> Watch Demo
-          </button>
+      </section>
+
+      {/* Video Section */}
+      <section className="video-section">
+        <div className="relative aspect-video bg-black/40 rounded-lg border border-[rgba(157,78,221,0.2)] flex items-center justify-center overflow-hidden">
+          <div className="text-center p-8">
+            <svg
+              className="w-32 h-32 mx-auto mb-6 text-primary-purple opacity-50"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <p className="text-text-secondary text-xl mb-4">
+              Demo Video
+            </p>
+            <p className="text-text-muted text-base">
+              Video placeholder - Coming soon
+            </p>
+          </div>
         </div>
       </section>
 
@@ -35,6 +56,13 @@ export default function HomePage({
           <p>
             Generate storyboards, images, and videos with integrated AI models.
           </p>
+        </div>
+
+        {/* Join Waitlist Button */}
+        <div className="text-center mb-12">
+          <button onClick={onOpenWaitlist} className="btn btn-primary">
+            Join the Waitlist
+          </button>
         </div>
 
         <div className="features-grid">
@@ -149,12 +177,9 @@ export default function HomePage({
           Create storyboards, generate images and videos, and polish assets in
           one place.
         </p>
-        <div className="cta-buttons">
+        <div className="text-center">
           <button onClick={onOpenWaitlist} className="btn btn-primary">
             Join the Waitlist
-          </button>
-          <button onClick={onOpenVideo} className="btn btn-secondary">
-            <span>▶</span> Watch Demo
           </button>
         </div>
       </section>
