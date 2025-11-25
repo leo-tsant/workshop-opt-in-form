@@ -18,34 +18,16 @@ export default function HomePage({ onOpenWaitlist }: HomePageProps) {
 
       {/* Video Section */}
       <section className="video-section">
-        <div className="relative aspect-video bg-black/40 rounded-lg border border-[rgba(157,78,221,0.2)] flex items-center justify-center overflow-hidden">
-          <div className="text-center p-8">
-            <svg
-              className="w-32 h-32 mx-auto mb-6 text-primary-purple opacity-50"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-            <p className="text-text-secondary text-xl mb-4">
-              Demo Video
-            </p>
-            <p className="text-text-muted text-base">
-              Video placeholder - Coming soon
-            </p>
-          </div>
+        <div className="relative aspect-video bg-black/40 rounded-lg border border-[rgba(157,78,221,0.2)] overflow-hidden">
+          <video
+            className="w-full h-full"
+            controls
+            preload="metadata"
+            poster="/videos/design-loop-demo-poster.jpg"
+          >
+            <source src="/videos/design-loop-demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
 
@@ -68,9 +50,9 @@ export default function HomePage({ onOpenWaitlist }: HomePageProps) {
 
       {/* Banner */}
       <section className="banner">
-        <h2>The premium way to stop the scroll.</h2>
+        <h2>Why Affiliate Images Might Be Killing Your Amazon Business</h2>
         <p className="text-lg mt-6 mb-6">
-          Why Affiliate Images Might Be Killing Your Amazon Business
+          The premium way to stop the scroll.
         </p>
         <a
           href="https://www.youtube.com/watch?v=R1MUKBwZUz8"
